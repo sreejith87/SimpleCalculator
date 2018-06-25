@@ -34,7 +34,7 @@ public class SimpleCalculator extends CordovaPlugin {
                  int p1 = Integer.parseInt(args.getString(0));
                  int p2 = Integer.parseInt(args.getString(1));
                  //int p2 = Integer.parseInt(args.getJSONObject(0).getString("param2"));
-                 callback.success(" " + (p1+p2) );
+                 callback.success("ADD : " + (p1+p2) );
                 // callback.success("success result");
             }
             catch(Exception ex)
@@ -55,7 +55,7 @@ public class SimpleCalculator extends CordovaPlugin {
                  int p1 = Integer.parseInt(args.getString(0));
                  int p2 = Integer.parseInt(args.getString(1));
                  //int p2 = Integer.parseInt(args.getJSONObject(0).getString("param2"));
-                 callback.success(" " + (p1-p2) );
+                 callback.success("SUB : " + (p1-p2) );
                 // callback.success("success result");
             }
             catch(Exception ex)
@@ -76,7 +76,7 @@ public class SimpleCalculator extends CordovaPlugin {
                  int p1 = Integer.parseInt(args.getString(0));
                  int p2 = Integer.parseInt(args.getString(1));
                  //int p2 = Integer.parseInt(args.getJSONObject(0).getString("param2"));
-                 callback.success(" " + (p1*p2) );
+                 callback.success("MUL : " + (p1*p2) );
                 // callback.success("success result");
             }
             catch(Exception ex)
@@ -97,7 +97,7 @@ public class SimpleCalculator extends CordovaPlugin {
                  int p1 = Integer.parseInt(args.getString(0));
                  int p2 = Integer.parseInt(args.getString(1));
                  //int p2 = Integer.parseInt(args.getJSONObject(0).getString("param2"));
-                 callback.success(" " + (p1/p2) );
+                 callback.success("DIV : " + (p1/p2) );
                 // callback.success("success result");
             }
             catch(Exception ex)
