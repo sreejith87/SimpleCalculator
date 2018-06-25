@@ -14,42 +14,42 @@ public class SimpleCalculator extends CordovaPlugin {
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-        if (action.equals("coolMethod")) {
-            String message = args.getString(0);
-            this.coolMethod(message, callbackContext);
-            return true;
-        }
-        // if (action.equals("addMethod")) {
-        //     this.addMethod(args, callbackContext);
+        // if (action.equals("coolMethod")) {
+        //     String message = args.getString(0);
+        //     this.coolMethod(message, callbackContext);
         //     return true;
         // }
+        if (action.equals("addMethod")) {
+            this.addMethod(args, callbackContext);
+            return true;
+        }
         return false;
     }
 
-    // private void addMethod(String args, CallbackContext callback) {
-    //     if(args != ""){
-    //         try
-    //         {
-    //             // int p1 = Integer.parseInt(args.getJSONObject(0).getString("param1"));
-    //             // int p2 = Integer.parseInt(args.getJSONObject(0).getString("param2"));
-    //             // callback.success(" " + (p1+p2) );
-    //             callback.success("success result");
-    //         }
-    //         catch(Exception ex)
-    //         {
-    //             callback.success("ex... " + ex);
-    //         }
-    //     }
-    //     else
-    //     {
-    //         callback.error("Dont pass null values");
-    //     }
-    // }
-    private void coolMethod(String message, CallbackContext callbackContext) {
-        if (message != null && message.length() > 0) {
-            callbackContext.success(message);
-        } else {
-            callbackContext.error("Expected one non-empty string argument.");
+    private void addMethod(String args, CallbackContext callback) {
+        if(args != ""){
+            try
+            {
+                // int p1 = Integer.parseInt(args.getJSONObject(0).getString("param1"));
+                // int p2 = Integer.parseInt(args.getJSONObject(0).getString("param2"));
+                // callback.success(" " + (p1+p2) );
+                callback.success("success result");
+            }
+            catch(Exception ex)
+            {
+                callback.success("ex... " + ex);
+            }
+        }
+        else
+        {
+            callback.error("Dont pass null values");
         }
     }
+    // private void coolMethod(String message, CallbackContext callbackContext) {
+    //     if (message != null && message.length() > 0) {
+    //         callbackContext.success(message);
+    //     } else {
+    //         callbackContext.error("Expected one non-empty string argument.");
+    //     }
+    // }
 }
