@@ -13,7 +13,7 @@ import org.json.JSONObject;
 public class SimpleCalculator extends CordovaPlugin {
 
     @Override
-    public boolean execute(String action, JSONObject args, CallbackContext callbackContext) throws JSONException {
+    public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         // if (action.equals("coolMethod")) {
         //     String message = args.getString(0);
         //     this.coolMethod(message, callbackContext);
@@ -27,7 +27,7 @@ public class SimpleCalculator extends CordovaPlugin {
         return false;
     }
 
-    private void addMethod(JSONObject args, CallbackContext callback) {
+    private void addMethod(JSONArray args, CallbackContext callback) {
         if(args != null){
             try
             {
