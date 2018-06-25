@@ -27,7 +27,7 @@ public class SimpleCalculator extends CordovaPlugin {
         return false;
     }
 
-    private void addMethod(JSONArray args, CallbackContext callback) {
+    private void addMethod(JSONObject args, CallbackContext callback) {
         if(args != null){
             try
             {
