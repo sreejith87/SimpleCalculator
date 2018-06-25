@@ -20,7 +20,8 @@ public class SimpleCalculator extends CordovaPlugin {
         //     return true;
         // }
         if (action.equals("addMethod")) {
-            this.addMethod(args, callbackContext);
+            String message = args.getString(0);
+            this.addMethod(message, callbackContext);
             return true;
         }
         return false;
