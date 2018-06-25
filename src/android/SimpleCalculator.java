@@ -20,15 +20,15 @@ public class SimpleCalculator extends CordovaPlugin {
         //     return true;
         // }
         if (action.equals("addMethod")) {
-            String message = args.getString(0);
-            this.addMethod(message, callbackContext);
+           // String message = args.getString(0);
+            this.addMethod(args, callbackContext);
             return true;
         }
         return false;
     }
 
-    private void addMethod(String args, CallbackContext callback) {
-        if(args != ""){
+    private void addMethod(JSONArray args, CallbackContext callback) {
+        if(args != null){
             try
             {
                 // int p1 = Integer.parseInt(args.getJSONObject(0).getString("param1"));
