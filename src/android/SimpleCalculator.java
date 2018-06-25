@@ -26,17 +26,17 @@ public class SimpleCalculator extends CordovaPlugin {
         }
         if (action.equals("subMethod")) {
            // String message = args.getString(0);
-            this.addMethod(args, callbackContext);
+            this.subMethod(args, callbackContext);
             return true;
         }
         if (action.equals("mulMethod")) {
            // String message = args.getString(0);
-            this.addMethod(args, callbackContext);
+            this.mulMethod(args, callbackContext);
             return true;
         }
         if (action.equals("divMethod")) {
            // String message = args.getString(0);
-            this.addMethod(args, callbackContext);
+            this.divMethod(args, callbackContext);
             return true;
         }
         return false;
