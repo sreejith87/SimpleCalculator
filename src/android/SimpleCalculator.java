@@ -11,7 +11,7 @@ import org.json.JSONObject;
 /**
  * This class echoes a string called from JavaScript.
  */
-public class SimpleCalculator extends CordovaPlugin {
+public class SimpleCalculator extends CordovaPlugin, AdvanceCalculator {
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
@@ -42,7 +42,9 @@ public class SimpleCalculator extends CordovaPlugin {
         }
         if (action.equals("powMethod")) {
            // String message = args.getString(0);
-           powMethod(args, callbackContext);
+           AdvanceCalculator ads = new AdvanceCalculator();
+           
+           ads.powMethod(args, callbackContext);
           // AdvanceCalculator.powMethod(args, callbackContext);
             //ad.powMethod(args, callbackContext);
             return true;
