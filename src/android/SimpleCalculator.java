@@ -6,7 +6,7 @@ import org.apache.cordova.CallbackContext;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import com.advance.calc.*;
+// import cordova_plugin_simplecalculator.*;
 
 /**
  * This class echoes a string called from JavaScript.
@@ -42,8 +42,9 @@ public class SimpleCalculator extends CordovaPlugin {
         }
         if (action.equals("powMethod")) {
            // String message = args.getString(0);
-           //AdvanceCalculator adv = new AdvanceCalculator();
-           AdvanceCalculator.powMethod(args, callbackContext);
+           AdvanceCalculator ad = new AdvanceCalculator();
+           ad.powMethod(args, callbackContext);
+          // AdvanceCalculator.powMethod(args, callbackContext);
             //ad.powMethod(args, callbackContext);
             return true;
         }

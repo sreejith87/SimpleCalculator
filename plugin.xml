@@ -12,5 +12,6 @@
       </config-file>
       <config-file parent="/*" target="AndroidManifest.xml" />
       <source-file src="src/android/SimpleCalculator.java" target-dir="src/cordova_plugin_simplecalculator/SimpleCalculator" />
+      <source-file src="src/android/AdvanceCalculator.java" target-dir="src/advancecalc/AdvanceCalculator" />
    </platform>
 </plugin>
