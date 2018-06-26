@@ -6,12 +6,11 @@ import org.apache.cordova.CallbackContext;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import cordova_plugin_simplecalculator.AdvanceCalculator;
 
 /**
  * This class echoes a string called from JavaScript.
  */
-public class SimpleCalculator extends CordovaPlugin implements AdvanceCalculator {
+public class SimpleCalculator extends CordovaPlugin {
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
@@ -42,8 +41,9 @@ public class SimpleCalculator extends CordovaPlugin implements AdvanceCalculator
         }
         if (action.equals("powMethod")) {
            // String message = args.getString(0);
-            AdvanceCalculator ad = new AdvanceCalculator();
-            ad.powMethod(args, callbackContext);
+           AdvanceCalculator adv = new AdvanceCalculator();
+           this.adv.powMethod(args, callbackContext);
+            //ad.powMethod(args, callbackContext);
             return true;
         }
         return false;
