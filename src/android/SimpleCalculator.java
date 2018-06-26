@@ -40,15 +40,6 @@ public class SimpleCalculator extends CordovaPlugin {
             this.divMethod(args, callbackContext);
             return true;
         }
-        if (action.equals("powMethod")) {
-           // String message = args.getString(0);
-           AdvanceCalculator ads = new AdvanceCalculator();
-           
-           ads.powMethod(args, callbackContext);
-          // AdvanceCalculator.powMethod(args, callbackContext);
-            //ad.powMethod(args, callbackContext);
-            return true;
-        }
         return false;
     }
 
@@ -136,11 +127,5 @@ public class SimpleCalculator extends CordovaPlugin {
         }
     }
 
-    // private void coolMethod(String message, CallbackContext callbackContext) {
-    //     if (message != null && message.length() > 0) {
-    //         callbackContext.success(message);
-    //     } else {
-    //         callbackContext.error("Expected one non-empty string argument.");
-    //     }
-    // }
+
 }

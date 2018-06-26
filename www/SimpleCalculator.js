@@ -13,6 +13,3 @@ module.exports.divMethod = function (arg0, success, error) {
     exec(success, error, 'SimpleCalculator', 'divMethod', [arg0]);
 };
 
-// exports.coolMethod = function (arg0, success, error) {
-//     exec(success, error, 'SimpleCalculator', 'coolMethod', [arg0]);
-// };
