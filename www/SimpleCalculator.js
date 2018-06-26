@@ -12,6 +12,9 @@ module.exports.mulMethod = function (arg0, success, error) {
 module.exports.divMethod = function (arg0, success, error) {
     exec(success, error, 'SimpleCalculator', 'divMethod', [arg0]);
 };
+module.exports.powMethod = function (arg0, success, error) {
+    exec(success, error, 'SimpleCalculator', 'powMethod', [arg0]);
+};
 // exports.coolMethod = function (arg0, success, error) {
 //     exec(success, error, 'SimpleCalculator', 'coolMethod', [arg0]);
 // };
